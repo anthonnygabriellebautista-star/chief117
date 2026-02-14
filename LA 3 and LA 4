@@ -1,0 +1,30 @@
+temperature = int(input('Enter the current temperature: '))
+
+if temperature > 30:
+    print('Hot day! Stay Hydrated.')
+
+elif temperature < 10: 
+    print('Very cold! Stay Warm.')
+else:
+    print('Pleasant weather!')
+
+-----------------------------------------------------
+
+age = int(input("Enter your age: "))
+
+
+has_id_input = input("Do you have a valid ID? (yes/no): ").strip().lower()
+
+
+has_id = True if has_id_input == "yes" else False
+
+
+if age >= 18 and has_id:
+    print("Eligible!")
+    
+    
+    if age >= 60:
+        print("You also qualify for a senior discount!")
+else:
+    print("Not eligible")
+
