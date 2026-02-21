@@ -1,0 +1,12 @@
+full_name = input("what is your full name? ").strip().lower()
+# Elvis Aaron Presley
+# 0123456789101112131415161718
+print(full_name[0], full_name[-1])
+#    print the first and the last character
+print(full_name[:5])
+#    slicing the first five
+print(full_name[0:6])
+#    put the name in reverse
+print(full_name[::-1])
+#    print every other character of the name
+print(full_name[::2])
