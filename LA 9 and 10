@@ -1,0 +1,50 @@
+# receipt_generator.py
+
+# Ask user for input
+item_name = input("Enter item name: ")
+quantity = int(input("Enter quantity: "))
+unit_price = float(input("Enter unit price: "))
+
+# Calculate total
+total = quantity * unit_price
+
+# Display formatted receipt
+print("\n" + "=" * 40)
+print("RECEIPT")
+print("=" * 40)
+
+print(f"{'Item':15}{'Qty':>5}{'Price':>12}")
+print("-" * 40)
+
+print(f"{item_name:<15}{quantity:>5}{unit_price:>12,.2f}")
+print("-" * 40)
+
+print(f"{'Total:':>32} ₱{total:,.2f}")
+print("=" * 40)
+
+=============================================================
+
+# username_generator.py
+
+# Ask the user for their full name
+full_name = input("Enter your full name: ")
+
+# Split the name into parts
+names = full_name.split()
+
+# Check if the user entered at least first and last name
+if len(names) < 2:
+    print("Please enter both first name and last name.")
+else:
+    # Get first and last name
+    first_name = names[0]
+    last_name = names[-1]
+
+    # Ask for birth year
+    birth_year = input("Enter your birth year (example: 1998): ")
+
+    # Create username
+    username = first_name[:3].lower() + last_name[:3].lower() + birth_year[-2:]
+
+    # Show the result
+    print("Your username is:", username)
