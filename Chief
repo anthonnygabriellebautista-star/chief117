@@ -1,1 +1,13 @@
+n = int(input("How many is the Base star? "))
 
+def pyramid(current, limit):
+    if current > limit:
+        print(f"done pyramid with {limit} * base")
+        return
+    spaces = " " * (limit - current)
+    stars = "* " * current 
+    print(spaces + stars)
+    
+    pyramid(current + 1, limit)
+    
+pyramid(1, n)
